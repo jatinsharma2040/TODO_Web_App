@@ -5,11 +5,9 @@ export default function Navbar({ setPage, isLoggedIn, handleLogout }) {
 
   return (
     <nav className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 border-b-4 border-white shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
+      <div className="container mx-auto flex justify-between items-center"
         <h1 className="text-white text-2xl font-bold">To Do App</h1>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-4">
           {isLoggedIn ? (
             <button
@@ -36,13 +34,11 @@ export default function Navbar({ setPage, isLoggedIn, handleLogout }) {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <button className="md:hidden text-white text-2xl" onClick={() => setIsOpen(!isOpen)}>
           ☰
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col mt-2 space-y-2">
           {isLoggedIn ? (
