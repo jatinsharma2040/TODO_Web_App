@@ -15,14 +15,12 @@ export default function App() {
 
   return (
     <div>
-      {/* Navbar is always present */}
       <Navbar setPage={setPage} isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
 
       {/* Show Login or Register if not logged in */}
       {!isLoggedIn && page === "login" && <Login setPage={setPage} setIsLoggedIn={setIsLoggedIn} />}
       {!isLoggedIn && page === "register" && <Register setPage={setPage} setIsLoggedIn={setIsLoggedIn} />}
 
-      {/* Show Todo when logged in */}
       {isLoggedIn ? (
         <div className="min-h-screen flex items-center justify-center">
           <Todo />
