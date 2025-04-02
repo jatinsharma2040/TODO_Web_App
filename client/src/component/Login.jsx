@@ -5,7 +5,6 @@ export default function Login({ setPage }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // Simulated user credentials (Replace this with an API call)
   const validUser = { username: "admin", password: "1234" };
 
   const handleLogin = () => {
